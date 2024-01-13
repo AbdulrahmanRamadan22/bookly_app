@@ -1,3 +1,5 @@
+import 'package:bookly_app/core/helpers/routing/app_router.dart';
+import 'package:bookly_app/core/helpers/routing/routers_string.dart';
 import 'package:bookly_app/core/theming/colors.dart';
 import 'package:bookly_app/features/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -12,10 +14,18 @@ class BooklyApp extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       child: MaterialApp(
-          theme: ThemeData.dark().copyWith(
-            scaffoldBackgroundColor: ColorsApp.primaryColor,
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.dark().copyWith(
+          scaffoldBackgroundColor: ColorsApp.primaryColor,
+          appBarTheme: const AppBarTheme(
+            backgroundColor: ColorsApp.primaryColor,
+            elevation: 0.0,
           ),
-          home: const SplashScreen()),
+        ),
+        home: const SplashScreen(),
+        initialRoute: Routes.splashScreen,
+        onGenerateRoute: AppRouter().generateRoute,
+      ),
     );
   }
 }
