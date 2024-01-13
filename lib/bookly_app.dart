@@ -21,6 +21,7 @@ class BooklyApp extends StatelessWidget {
             backgroundColor: ColorsApp.primaryColor,
             elevation: 0.0,
           ),
+          
         ),
         home: const SplashScreen(),
         initialRoute: Routes.splashScreen,
