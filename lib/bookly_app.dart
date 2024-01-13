@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BooklyApp extends StatelessWidget {
   const BooklyApp({super.key});
+  
 
   @override
   Widget build(BuildContext context) {
