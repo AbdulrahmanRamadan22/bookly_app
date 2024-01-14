@@ -13,19 +13,23 @@ class BooklyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       minTextAdapt: true,
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData.dark().copyWith(
-          scaffoldBackgroundColor: ColorsApp.primaryColor,
-          appBarTheme: const AppBarTheme(
-            backgroundColor: ColorsApp.primaryColor,
-            elevation: 0.0,
+      child: ScreenUtilInit(
+        designSize: const Size(360, 690),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData.dark().copyWith(
+            scaffoldBackgroundColor: ColorsApp.primaryColor,
+            appBarTheme: const AppBarTheme(
+              backgroundColor: ColorsApp.primaryColor,
+              elevation: 0.0,
+            ),
           ),
-          
+          home: const SplashScreen(),
+          initialRoute: Routes.splashScreen,
+          onGenerateRoute: AppRouter().generateRoute,
         ),
-        home: const SplashScreen(),
-        initialRoute: Routes.splashScreen,
-        onGenerateRoute: AppRouter().generateRoute,
       ),
     );
   }
