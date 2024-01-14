@@ -13,9 +13,10 @@ class BuildBookItemView extends StatelessWidget {
         aspectRatio: 2.5 / 4,
         child: Container(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(15),
             // color: Colors.amber,
-            image: const DecorationImage(image: AssetImage(ImagesApp.test)),
+            image: const DecorationImage(
+                fit: BoxFit.fill, image: AssetImage(ImagesApp.test)),
           ),
         ),
       ),

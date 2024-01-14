@@ -1,4 +1,5 @@
 import 'package:bookly_app/core/helpers/spacing.dart';
+import 'package:bookly_app/core/theming/images.dart';
 import 'package:bookly_app/core/theming/styles.dart';
 import 'package:bookly_app/core/widgets/custom_app_bar.dart';
 import 'package:bookly_app/features/home/ui/widgets/build_book_list_view.dart';
@@ -21,7 +22,22 @@ class HomeScreenBody extends StatelessWidget {
           verticalSpace(40),
           Text(
             "Best Seller",
-            style: TextStyles.titleMedium,
+            style: TextStyles.font18SemiBold,
+          ),
+          verticalSpace(20),
+          SizedBox(
+            height: 110.h,
+            child: AspectRatio(
+              aspectRatio: 2.5 / 4,
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  // color: Colors.amber,
+                  image: const DecorationImage(
+                      fit: BoxFit.fill, image: AssetImage(ImagesApp.test)),
+                ),
+              ),
+            ),
           ),
         ],
       ),
