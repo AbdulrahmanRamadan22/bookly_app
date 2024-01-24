@@ -14,7 +14,7 @@ class BuildBookListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => const BuildBookItemView(),
         itemCount: 10,
-        separatorBuilder: (context, index) => horizontalSpace(15),
+        separatorBuilder: (context, index) => horizontalSpace(16),
       ),
     );
   }
