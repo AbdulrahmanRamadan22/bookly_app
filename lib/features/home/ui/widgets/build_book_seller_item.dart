@@ -1,6 +1,6 @@
 import 'package:bookly_app/core/helpers/spacing.dart';
-import 'package:bookly_app/core/theming/images.dart';
 import 'package:bookly_app/core/theming/styles.dart';
+import 'package:bookly_app/features/home/ui/widgets/build_book_item_view.dart';
 import 'package:bookly_app/features/home/ui/widgets/salary_and_rating.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,17 +16,7 @@ class BuildBookSellerItem extends StatelessWidget {
         children: [
           SizedBox(
             height: 110.h,
-            child: AspectRatio(
-              aspectRatio: 2.5 / 4,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  // color: Colors.amber,
-                  image: const DecorationImage(
-                      fit: BoxFit.fill, image: AssetImage(ImagesApp.test)),
-                ),
-              ),
-            ),
+            child: const BuildBookItemView(),
           ),
           Expanded(
             child: Padding(
