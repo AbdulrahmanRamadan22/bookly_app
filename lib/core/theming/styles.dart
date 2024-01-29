@@ -16,36 +16,27 @@ abstract class TextStyles {
     fontSize: 30.sp,
     fontWeight: FontWeightHelper.regular,
   );
-<<<<<<< HEAD
-=======
   static TextStyle font24Regular = TextStyle(
     fontSize: 24.sp,
     fontWeight: FontWeightHelper.extraBold,
   );
->>>>>>> f604139ba4dfa3754791f3d237e85681cc5128ba
 
   static TextStyle font14Regular = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,
   );
-<<<<<<< HEAD
-=======
   static TextStyle font14semiBold = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.semiBold,
   );
->>>>>>> f604139ba4dfa3754791f3d237e85681cc5128ba
 
   static TextStyle font16Medium = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.medium,
   );
-<<<<<<< HEAD
-=======
 
    static TextStyle font16bold = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.bold,
   );
->>>>>>> f604139ba4dfa3754791f3d237e85681cc5128ba
 }

@@ -38,4 +38,3 @@ class BookDetailsBody extends StatelessWidget {
     );
   }
 }
-

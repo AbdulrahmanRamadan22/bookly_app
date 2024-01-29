@@ -4,17 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BuildBookListView extends StatelessWidget {
-  const BuildBookListView({super.key});
-
+  const BuildBookListView({super.key, required this.height});
+  final double height;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200.h,
+      height: height.h,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => const BuildBookItemView(),
         itemCount: 10,
-        separatorBuilder: (context, index) => horizontalSpace(16),
+        separatorBuilder: (context, index) => horizontalSpace(10),
       ),
     );
   }
