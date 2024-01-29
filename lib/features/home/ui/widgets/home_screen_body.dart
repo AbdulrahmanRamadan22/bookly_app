@@ -13,17 +13,17 @@ class HomeScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-           const CustomAppBar(),
+        const CustomAppBar(),
         Expanded(
           child: CustomScrollView(
+            physics: const BouncingScrollPhysics(),
             slivers: [
               SliverToBoxAdapter(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                 
                     verticalSpace(15),
-                    const BuildBookListView(),
+                    const BuildBookListView(height: 200),
                     verticalSpace(40),
                     Padding(
                       padding: EdgeInsets.only(left: 30.w),

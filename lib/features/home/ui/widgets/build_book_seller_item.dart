@@ -1,7 +1,8 @@
 import 'package:bookly_app/core/helpers/spacing.dart';
-import 'package:bookly_app/core/theming/images.dart';
+import 'package:bookly_app/core/theming/font_weight_helper.dart';
 import 'package:bookly_app/core/theming/styles.dart';
-import 'package:bookly_app/features/home/ui/widgets/salary_and_rating.dart';
+import 'package:bookly_app/features/home/ui/widgets/build_book_item_view.dart';
+import 'package:bookly_app/features/home/ui/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,17 +17,7 @@ class BuildBookSellerItem extends StatelessWidget {
         children: [
           SizedBox(
             height: 110.h,
-            child: AspectRatio(
-              aspectRatio: 2.5 / 4,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  // color: Colors.amber,
-                  image: const DecorationImage(
-                      fit: BoxFit.fill, image: AssetImage(ImagesApp.test)),
-                ),
-              ),
-            ),
+            child: const BuildBookItemView(),
           ),
           Expanded(
             child: Padding(
@@ -46,7 +37,17 @@ class BuildBookSellerItem extends StatelessWidget {
                         color: const Color.fromARGB(146, 255, 255, 255)),
                   ),
                   verticalSpace(3),
-                  const SalaryAndRating(),
+                  Row(
+                    children: [
+                      Text(
+                        "19.99 €",
+                        style: TextStyles.font20Regular
+                            .copyWith(fontWeight: FontWeightHelper.bold),
+                      ),
+                      const Spacer(),
+                      const BookRating(),
+                    ],
+                  )
                 ],
               ),
             ),
