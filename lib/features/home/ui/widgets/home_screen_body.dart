@@ -1,6 +1,7 @@
 import 'package:bookly_app/core/helpers/spacing.dart';
 import 'package:bookly_app/core/theming/styles.dart';
 import 'package:bookly_app/core/widgets/custom_app_bar.dart';
+import 'package:bookly_app/features/home/ui/widgets/build_book_list_view.dart';
 import 'package:bookly_app/features/home/ui/widgets/build_book_seller_list_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,7 +23,7 @@ class HomeScreenBody extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     verticalSpace(15),
-                    // const BuildBookListView(height: 110),
+                    const BuildBookListView(height: 200),
                     verticalSpace(40),
                     Padding(
                       padding: EdgeInsets.only(left: 30.w),
