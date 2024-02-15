@@ -1,3 +1,5 @@
+import 'package:bookly_app/core/helpers/extensions.dart';
+import 'package:bookly_app/core/helpers/routing/routers_string.dart';
 import 'package:bookly_app/core/theming/images.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -19,7 +21,9 @@ class CustomAppBar extends StatelessWidget {
           const Spacer(),
           IconButton(
               padding: EdgeInsets.zero,
-              onPressed: () {},
+              onPressed: () {
+                context.pushNamed(Routes.searchScreen);
+              },
               icon: const Icon(
                 FontAwesomeIcons.magnifyingGlass,
               ))
