@@ -38,7 +38,10 @@ class HomeScreenBody extends StatelessWidget {
               ),
               const SliverFillRemaining(
                 child: BuildBookSellerListItem(),
-              )
+              ),
+              SliverToBoxAdapter(
+                child: verticalSpace(15),
+              ),
             ],
           ),
         ),
